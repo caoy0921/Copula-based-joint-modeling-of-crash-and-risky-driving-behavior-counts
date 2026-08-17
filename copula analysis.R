@@ -1,10 +1,6 @@
 # Copula-based joint modeling of crash count and risky driving behavior count
 
 # 1. Load packages
-
-set.seed(10)
-options(stringsAsFactors = FALSE, warn = 1)
-
 required_packages <- c("glmmTMB", "readxl", "copula", "fitdistrplus", "writexl")
 missing_packages <- required_packages[!vapply(required_packages, requireNamespace, quietly = TRUE, FUN.VALUE = logical(1))]
 if (length(missing_packages) > 0) stop(paste0("The following packages are required but not installed: ", paste(missing_packages, collapse = ", ")))
